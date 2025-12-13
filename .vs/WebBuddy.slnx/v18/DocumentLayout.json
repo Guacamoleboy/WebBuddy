@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|solutionrelative:project\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|solutionrelative:project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\versioncontrol\\version.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\versioncontrol\\version.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "Project\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.Designer.cs",
-              "RelativeToolTip": "Project\\MainForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Version.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\VersionControl\\Version.cs",
+              "RelativeDocumentMoniker": "Project\\VersionControl\\Version.cs",
+              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\VersionControl\\Version.cs",
+              "RelativeToolTip": "Project\\VersionControl\\Version.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:04:11.385Z",
+              "WhenOpened": "2025-12-13T19:35:06.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.cs",
-              "RelativeDocumentMoniker": "Project\\MainForm.cs",
-              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.cs",
-              "RelativeToolTip": "Project\\MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:59:47.691Z",
+              "WhenOpened": "2025-12-13T19:33:21.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "Project\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "Project\\Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:32:21.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Project\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.cs",
+              "RelativeToolTip": "Project\\Forms\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:32:43.319Z",
               "EditorCaption": ""
             }
           ]

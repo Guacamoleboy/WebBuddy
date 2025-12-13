@@ -1,17 +1,25 @@
-namespace Project
-{
-    internal static class Program
-    {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+// Package
+namespace Project {
+
+// Imports
+using Project.Forms;
+
+    internal static class Program {
+
+        // Attributes
         [STAThread]
-        static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+        // _______________________________________________________
+
+        static void Main() {
+
+            Console.WriteLine("Same as System.out.println('Text'); in java"); 
+
+            ApplicationConfiguration.Initialize(); // GUI Settings
+            Application.Run(new MainForm()); // App Start 
+
         }
+
     }
+
 }

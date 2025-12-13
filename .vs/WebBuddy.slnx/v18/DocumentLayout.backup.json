@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|Project\\Project.csproj|solutionrelative:project\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -32,14 +28,14 @@
               "RelativeDocumentMoniker": "Project\\Program.cs",
               "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Program.cs",
               "RelativeToolTip": "Project\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:33:21.142Z",
+              "WhenOpened": "2025-12-13T20:02:56.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "Project\\Forms\\MainForm.Designer.cs",
@@ -47,25 +43,12 @@
               "RelativeToolTip": "Project\\Forms\\MainForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:32:21.015Z",
+              "WhenOpened": "2025-12-13T19:55:14.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\Forms\\MainForm.cs",
-              "RelativeToolTip": "Project\\Forms\\MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:32:43.319Z",
-              "EditorCaption": ""
             }
           ]
         }

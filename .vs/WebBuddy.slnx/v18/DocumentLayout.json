@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|solutionrelative:project\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|c:\\users\\jonas\\desktop\\git\\webbuddy\\project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB77CF74-0A45-4DC8-A796-213780788A16}|Project\\Project.csproj|solutionrelative:project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "Project\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.Designer.cs",
+              "RelativeToolTip": "Project\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T18:04:11.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.cs",
+              "RelativeDocumentMoniker": "Project\\MainForm.cs",
+              "ToolTip": "C:\\Users\\jonas\\Desktop\\Git\\WebBuddy\\Project\\MainForm.cs",
+              "RelativeToolTip": "Project\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:59:47.691Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

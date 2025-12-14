@@ -1,48 +1,56 @@
+// Imports
+using System;
+using System.Windows.Forms;
+using Project.Theme;
+using Project.UI;
+using Project.Utilities;
+
 // Package
 namespace Project.Forms {
 
-// Imports
-using Project.Theme;
-using Project.UI;
-
-    public partial class MainForm : Form { // : Form -> inherits from Form
+    public partial class MainForm : Form {
 
         // Attributes
+        private Tray tray;
 
-        // _______________________________________________________
+        // _________________________________________________
 
-        public MainForm() { // Constructor
+        public MainForm() {
             InitializeComponent();
+        }
 
-            /*
-             
-            Custom TitleBar Attempt
-            _______________________
+        // _________________________________________________
 
-            FormBorderStyle = FormBorderStyle.None;
-            Controls.Add(new TitleBar(this));
+        private void MainForm_Load(object sender, EventArgs e) {
+            
+            // GUI setup
+            GUISetup.SetupMainFormSize(this, 0.6f);
+            GUISetup.SetupMainFormColors(this);
+            GUISetup.SetupMainFormInfo(this);
+            GUISetup.SetupMainFormScaling(this);
 
-            */
+            // Tray
+            tray = new Tray(this);
 
         }
 
-        // _______________________________________________________
+        // _________________________________________________
+        // Prevents app from shutting down when closed
 
-        private void MainForm_Load(object sender, EventArgs e) {
+        protected override void OnFormClosing(FormClosingEventArgs e) {
+            tray.HandleFormClosing(e);
+        }
 
-            // Initial
-            var screen = Screen.PrimaryScreen.Bounds;
-            float scale = 0.6f; // 60% as float value
+        // _________________________________________________
 
-            // Calculate and set height / width
-            int width = (int)(screen.Width * scale);
-            int height = (int)(screen.Height * scale);
+        protected override void Dispose(bool disposing) {
 
-            // Sets app size dynamicly depending on screen size it's loaded on
-            this.Size = new Size(width, height);
-            this.StartPosition = FormStartPosition.CenterScreen;
+            if (disposing) {
+                tray.Dispose();
+                components.Dispose();
+            }
 
-            this.BackColor = ColorScheme.MainBlue;
+            base.Dispose(disposing);
 
         }
 

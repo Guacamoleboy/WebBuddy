@@ -10,12 +10,16 @@
 
   <ItemGroup>
     <None Remove="Resources\Icon\Close.ico" />
+    <None Remove="Resources\Icon\logo-16.ico" />
     <None Remove="Resources\Icon\logo-32.ico" />
     <None Remove="Resources\Icon\Minimize.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Resources\Icon\Close.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icon\logo-16.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Icon\logo-32.ico">

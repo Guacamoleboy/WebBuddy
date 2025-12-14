@@ -14,7 +14,7 @@ namespace Project.VersionControl {
     public static class Version {
 
         // Attributes
-        public const string Current = "0.0.2";
+        public const string Current = "0.0.3";
 
     }
 

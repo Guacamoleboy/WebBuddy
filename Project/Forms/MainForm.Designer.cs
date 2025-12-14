@@ -24,9 +24,8 @@ using Project.VersionControl;
 
             SuspendLayout(); // Layout Optimization
 
-            AutoScaleDimensions = new SizeF(7F, 15F); // DPI (NUMBER) & Font Scaling (F)
+            AutoScaleDimensions = new SizeF(7F, 15F); // Font Width & Font Height
             AutoScaleMode = AutoScaleMode.Font; // Makes sure it scales correct on all screen sizes
-            ClientSize = new Size(800, 450); // GUI Size
             Text = $"WebBuddy | Version {Version.Current}"; // GUI Title
             this.Icon = new Icon("Resources/Icon/logo-32.ico");
 

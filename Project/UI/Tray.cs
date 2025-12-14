@@ -66,7 +66,7 @@ using System.Windows.Forms;
         // IDisposable method
 
         public void Dispose() { 
-            trayIcon?.Dispose();
+            trayIcon.Dispose();
         }
 
     }

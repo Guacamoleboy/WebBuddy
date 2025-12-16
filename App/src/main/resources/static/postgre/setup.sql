@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS
+Website,
+Category;
+
+CREATE TABLE Category (
+id SERIAL PRIMARY KEY,
+name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE Website (
+id SERIAL PRIMARY KEY,
+domain TEXT NOT NULL UNIQUE,
+isSafe BOOLEAN NOT NULL,
+confidence INTEGER,
+reason TEXT,
+category INTEGER REFERENCES Category(id),
+validated TIMESTAMP NOT NULL,
+lastValidated TIMESTAMP NOT NULL
+);

@@ -1,0 +1,38 @@
+/* ################################# ROOT SETTINGS "#################################### */
+
+:root {
+
+    /* Project Theme */
+    --background: #FFF;
+    --text: #000;
+
+    /* Input Theme */
+    --input-background: #FFF;
+    --input-text: #000;
+    --input-border: #CCC;
+
+}
+
+/* ################################ PROJECT SETTINGS ################################### */
+
+html, body {
+    background-color: var(--background);
+}
+
+/* ################################### INDEX.HTML ###################################### */
+
+.validation-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+#validateDomain {
+    color: var(--input-text);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+}

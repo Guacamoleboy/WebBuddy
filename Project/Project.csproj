@@ -13,6 +13,9 @@
     <None Remove="Resources\Icon\logo-16.ico" />
     <None Remove="Resources\Icon\logo-32.ico" />
     <None Remove="Resources\Icon\Minimize.ico" />
+    <None Update="Data\Local\validated.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +31,11 @@
     <Content Include="Resources\Icon\Minimize.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
   </ItemGroup>
 
 </Project>

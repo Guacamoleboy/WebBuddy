@@ -1,5 +1,7 @@
+// Package
 package dk.project.entity;
 
+// Imports
 import java.time.LocalDateTime;
 
 public class Website {
@@ -8,19 +10,33 @@ public class Website {
     private int id;
     private String domain;
     private boolean isSafe;
-    private int confidence;
+    private Integer confidence;
     private String reason;
-    private int category;
+    private Integer category;
     private LocalDateTime validated;
     private LocalDateTime lastValidated;
 
     // ________________________________________________________________
+    // Unit Tests
 
-    public Website(){} // Unit Tests
+    public Website(){}
 
     // ________________________________________________________________
 
-    public Website(int id, String domain, boolean isSafe, int confidence, String reason,
+    public Website(String domain, boolean isSafe, Integer  confidence, String reason,
+    int category, LocalDateTime validated, LocalDateTime lastValidated) {
+        this.domain = domain;
+        this.isSafe = isSafe;
+        this.confidence = confidence;
+        this.reason = reason;
+        this.category = category;
+        this.validated = validated;
+        this.lastValidated = lastValidated;
+    }
+
+    // ________________________________________________________________
+
+    public Website(int id, String domain, boolean isSafe, Integer  confidence, String reason,
     int category, LocalDateTime validated, LocalDateTime lastValidated) {
         this.id = id;
         this.domain = domain;
@@ -70,13 +86,13 @@ public class Website {
 
     // ________________________________________________________________
 
-    public int getConfidence() {
+    public Integer getConfidence() {
         return confidence;
     }
 
     // ________________________________________________________________
 
-    public void setConfidence(int confidence) {
+    public void setConfidence(Integer confidence) {
         this.confidence = confidence;
     }
 
@@ -94,13 +110,13 @@ public class Website {
 
     // ________________________________________________________________
 
-    public int getCategory() {
+    public Integer  getCategory() {
         return category;
     }
 
     // ________________________________________________________________
 
-    public void setCategory(int category) {
+    public void setCategory(Integer  category) {
         this.category = category;
     }
 

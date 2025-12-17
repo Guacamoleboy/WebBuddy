@@ -19,6 +19,13 @@ public class Category {
 
     // ____________________________________________________
 
+    public Category(String name){
+        this.id = id;
+        this.name = name;
+    }
+
+    // ____________________________________________________
+
     public int getId(){
         return this.id;
     }

@@ -24,9 +24,9 @@ public class WebsiteMapper {
 
             stmt.setString(1, website.getDomain());
             stmt.setBoolean(2, website.isSafe());
-            stmt.setInt(3, website.getConfidence());
+            stmt.setObject(3, website.getConfidence() != null ? website.getConfidence() : null, Types.INTEGER);
             stmt.setString(4, website.getReason());
-            stmt.setInt(5, website.getCategory());
+            stmt.setObject(5, website.getCategory() != null ? website.getCategory() : null, Types.INTEGER);
             stmt.setTimestamp(6, Timestamp.valueOf(website.getValidated()));
             stmt.setTimestamp(7, Timestamp.valueOf(website.getLastValidated()));
 
@@ -116,9 +116,9 @@ public class WebsiteMapper {
 
             stmt.setString(1, website.getDomain());
             stmt.setBoolean(2, website.isSafe());
-            stmt.setInt(3, website.getConfidence());
+            stmt.setObject(3, website.getConfidence() != null ? website.getConfidence() : null, Types.INTEGER);
             stmt.setString(4, website.getReason());
-            stmt.setInt(5, website.getCategory());
+            stmt.setObject(5, website.getCategory() != null ? website.getCategory() : null, Types.INTEGER);
             stmt.setTimestamp(6, Timestamp.valueOf(website.getValidated()));
             stmt.setTimestamp(7, Timestamp.valueOf(website.getLastValidated()));
             stmt.setInt(8, website.getId());
@@ -164,9 +164,9 @@ public class WebsiteMapper {
                 rs.getInt("id"),
                 rs.getString("domain"),
                 rs.getBoolean("is_safe"),
-                rs.getInt("confidence"),
+                rs.getObject("confidence", Integer.class),
                 rs.getString("reason"),
-                rs.getInt("category_id"),
+                rs.getObject("category", Integer.class),
                 rs.getTimestamp("validated").toLocalDateTime(),
                 rs.getTimestamp("last_validated").toLocalDateTime()
         );

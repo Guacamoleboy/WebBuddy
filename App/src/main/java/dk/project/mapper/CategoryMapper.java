@@ -103,7 +103,7 @@ public class CategoryMapper {
     }
 
     // _____________________________________________________________________
-    // Update a category
+
     public void updateCategory(Category category) throws DatabaseException {
         String sql = "UPDATE category SET name = ? WHERE id = ?";
 

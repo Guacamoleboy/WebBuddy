@@ -160,6 +160,9 @@ document.addEventListener("DOMContentLoaded", function() {
             case "noAccess":
                 showNotification("Ingen adgang", "red");
                 break;
+            case "domainNotFound":
+                showNotification("Intet domæne fundet", "red");
+                break;
         }
     }
 

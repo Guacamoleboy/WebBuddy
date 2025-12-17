@@ -10,7 +10,7 @@
     <meta name="author" content="Guacamoleboy"> <!-- Author of Website -->
 
     <!-- Visuals -->
-    <title>WebBuddy</title>
+    <title>WebBuddy - Search</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&family=Raleway:wght@400;700&family=Nunito:wght@400;700&family=Work+Sans:wght@400;700&family=Exo+2:wght@400;700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -36,18 +36,19 @@
 </head>
 <body>
 
-<!-- Test Search Page -->
-<section class="validation-section">
+<!-- Search Result Page -->
+<section class="search-result-section">
     <div class="guac-container">
         <div class="guac-row guac-justify-center guac-align-center guac-text-center">
-            <form action="/search" method="get">
-                <input type="text" name="domain" placeholder="Domæne her">
-                <button type="submit">Søg</button>
-            </form>
+            <p>Domæne: <span th:text="${website.domain}"></span></p>
+            <p>Status: <span th:text="${website.isSafe} ? 'Safe' : 'Unsafe'"></span></p>
+            <p>Confidence: <span th:text="${website.confidence}"></span></p>
+            <p>Category ID: <span th:text="${website.category}"></span></p>
+            <p>Sidst valideret: <span th:text="${website.lastValidated}"></span></p>
         </div>
     </div>
 </section>
-<!-- Test Search Page -->
+<!-- Search Result Page -->
 
 <!-- Notifications -->
 <div id="guac-notification-container"></div>

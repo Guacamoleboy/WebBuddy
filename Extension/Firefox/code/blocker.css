@@ -1,0 +1,46 @@
+#safety-blocker-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #1e33aa;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+#safety-blocker-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#safety-blocker-overlay p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.safety-blocker-actions button {
+  padding: 0.625rem 1.125rem; 
+  font-size: 0.875rem;       
+  margin: 0 0.5rem;           
+  cursor: pointer;
+  border-radius: 0.375rem;    
+  border: none;
+}
+
+#continue-btn {
+  background: #f59e0b;
+  color: #000;
+}
+
+#back-btn {
+  background: #ef4444;
+  color: #fff;
+}

@@ -15,6 +15,9 @@ INSERT INTO Category (name) VALUES
 
 INSERT INTO Website (domain, is_safe, confidence, reason, category, validated, last_validated) VALUES
 ('fog.guacamoleboy.dk', FALSE, 95, 'Validated as unsafe | Safety: Phishing', 1, '2025-12-16 10:00:00', '2025-12-16 10:00:00'),
+('https://fog.guacamoleboy.dk', FALSE, 95, 'Validated as unsafe | Safety: Phishing', 1, '2025-12-16 10:00:00', '2025-12-16 10:00:00'),
+('https://fog.guacamoleboy.dk/', FALSE, 95, 'Validated as unsafe | Safety: Phishing', 1, '2025-12-16 10:00:00', '2025-12-16 10:00:00'),
+('https://www.fog.guacamoleboy.dk', FALSE, 95, 'Validated as unsafe | Safety: Phishing', 1, '2025-12-16 10:00:00', '2025-12-16 10:00:00'),
 ('ronau.dk', TRUE, NULL, 'Validated as safe', NULL, '2025-12-16 10:00:00', '2025-12-16 10:00:00');
 
 INSERT INTO scan_request (domain, status, source) VALUES

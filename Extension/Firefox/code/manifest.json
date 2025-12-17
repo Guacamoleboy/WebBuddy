@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "WebBuddy",
+  "version": "1.0",
+  "description": "WebBuddy - Keeping people safe online",
+  "permissions": [
+    "webRequest",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["scanner.js"]
+  }
+}

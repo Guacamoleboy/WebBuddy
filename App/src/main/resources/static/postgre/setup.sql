@@ -3,7 +3,8 @@ Website,
 Category,
 scan_request,
 ending_risk,
-scan_result
+scan_result,
+website_category
 CASCADE;
 
 CREATE TABLE category (
@@ -13,23 +14,25 @@ name TEXT NOT NULL UNIQUE
 
 CREATE TABLE website (
 id SERIAL PRIMARY KEY,
-domain TEXT NOT NULL UNIQUE,
-is_safe BOOLEAN NOT NULL,
+domain TEXT NOT NULL UNIQUE,                                            -- websites that have been scanned by us
+is_safe BOOLEAN NOT NULL,                                               -- true or false
 confidence INTEGER,                                                     -- null if it's a safe website
 reason TEXT,
-category INTEGER REFERENCES category(id),
 validated TIMESTAMP NOT NULL,
 last_validated TIMESTAMP NOT NULL,
-CHECK (
-    (is_safe = TRUE AND confidence IS NULL)
-    OR
-    (is_safe = FALSE AND confidence BETWEEN 1 AND 100)
-)
+CHECK ((is_safe = TRUE AND confidence IS NULL)                          -- check since confidence uses Integer
+OR(is_safe = FALSE AND confidence BETWEEN 1 AND 100))
+);
+
+CREATE TABLE website_category (                                         -- mange til mange relation
+website_id INTEGER NOT NULL REFERENCES website(id) ON DELETE CASCADE,
+category_id INTEGER NOT NULL REFERENCES category(id) ON DELETE CASCADE,
+PRIMARY KEY (website_id, category_id)
 );
 
 CREATE TABLE scan_request (
 id SERIAL PRIMARY KEY,
-domain TEXT NOT NULL,
+domain TEXT NOT NULL,                                                   -- websites that have been scanned by users
 requested_at TIMESTAMP NOT NULL DEFAULT now(),
 status TEXT NOT NULL,                                                   -- Open,Closed
 source TEXT,                                                            -- Browser (firefox, chrome, opera)
@@ -45,11 +48,8 @@ confidence INTEGER,
 reason TEXT,
 category INTEGER REFERENCES category(id),
 scanned_at TIMESTAMP NOT NULL DEFAULT now(),
-CHECK (
-    (is_safe = TRUE AND confidence IS NULL)
-    OR
-    (is_safe = FALSE AND confidence BETWEEN 1 AND 100)
-)
+CHECK ((is_safe = TRUE AND confidence IS NULL)                          -- check since confidence uses Integer
+OR (is_safe = FALSE AND confidence BETWEEN 1 AND 100))
 );
 
 CREATE TABLE ending_risk (

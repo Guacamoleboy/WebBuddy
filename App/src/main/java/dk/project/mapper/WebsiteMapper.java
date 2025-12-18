@@ -17,7 +17,7 @@ public class WebsiteMapper {
     // _____________________________________________________________________
 
     public void newWebsite(Website website) throws DatabaseException {
-        String sql = "INSERT INTO website (domain, is_safe, confidence, reason, category_id, validated, last_validated) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO website (domain, is_safe, confidence, reason, validated, last_validated) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = Database.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -26,9 +26,8 @@ public class WebsiteMapper {
             stmt.setBoolean(2, website.isSafe());
             stmt.setObject(3, website.getConfidence() != null ? website.getConfidence() : null, Types.INTEGER);
             stmt.setString(4, website.getReason());
-            stmt.setObject(5, website.getCategory() != null ? website.getCategory() : null, Types.INTEGER);
-            stmt.setTimestamp(6, Timestamp.valueOf(website.getValidated()));
-            stmt.setTimestamp(7, Timestamp.valueOf(website.getLastValidated()));
+            stmt.setTimestamp(5, Timestamp.valueOf(website.getValidated()));
+            stmt.setTimestamp(6, Timestamp.valueOf(website.getLastValidated()));
 
             stmt.executeUpdate();
 
@@ -110,7 +109,7 @@ public class WebsiteMapper {
     // _____________________________________________________________________
 
     public void updateWebsite(Website website) throws DatabaseException {
-        String sql = "UPDATE website SET domain = ?, is_safe = ?, confidence = ?, reason = ?, category_id = ?, validated = ?, last_validated = ? WHERE id = ?";
+        String sql = "UPDATE website SET domain = ?, is_safe = ?, confidence = ?, reason = ?, validated = ?, last_validated = ? WHERE id = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -118,10 +117,9 @@ public class WebsiteMapper {
             stmt.setBoolean(2, website.isSafe());
             stmt.setObject(3, website.getConfidence() != null ? website.getConfidence() : null, Types.INTEGER);
             stmt.setString(4, website.getReason());
-            stmt.setObject(5, website.getCategory() != null ? website.getCategory() : null, Types.INTEGER);
-            stmt.setTimestamp(6, Timestamp.valueOf(website.getValidated()));
-            stmt.setTimestamp(7, Timestamp.valueOf(website.getLastValidated()));
-            stmt.setInt(8, website.getId());
+            stmt.setTimestamp(5, Timestamp.valueOf(website.getValidated()));
+            stmt.setTimestamp(6, Timestamp.valueOf(website.getLastValidated()));
+            stmt.setInt(7, website.getId());
 
             int rows = stmt.executeUpdate();
             if (rows == 0) {
@@ -166,9 +164,9 @@ public class WebsiteMapper {
                 rs.getBoolean("is_safe"),
                 rs.getObject("confidence", Integer.class),
                 rs.getString("reason"),
-                rs.getObject("category", Integer.class),
                 rs.getTimestamp("validated").toLocalDateTime(),
                 rs.getTimestamp("last_validated").toLocalDateTime()
         );
     }
+
 }

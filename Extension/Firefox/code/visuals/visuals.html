@@ -1,0 +1,74 @@
+<head>
+<link rel="stylesheet" href="../visuals/visuals.css">
+</head>
+<body class="webbuddy-content">
+    <div id="safety-blocker-overlay">
+        <h1>WebBuddy</h1>
+        <h2>Usikker hjemmeside</h2>
+        <div class="webbuddy-url-card">
+            <span class="webbuddy-url-label">Du er her</span>
+            <span class="webbuddy-url-value">fog.guacamoleboy.dk</span>
+        </div>
+        <p>
+            <i>Denne side står som <span class="webbuddy-text-orange">usikker</span> i vores system!<br>
+            Benyt kun siden hvis du kender den.</i>
+        </p>
+
+        <div class="webbuddy-categories">
+            <div class="webbuddy-category-card">
+                <span class="webbuddy-category-title">Phishing</span>
+            </div>
+
+            <div class="webbuddy-category-card">
+                <span class="webbuddy-category-title">Scam</span>
+            </div>
+
+            <div class="webbuddy-category-card">
+                <span class="webbuddy-category-title">Ukendt udbyder</span>
+            </div>
+        </div>
+
+        <div id="webbuddy-progress-container">
+            <div id="webbuddy-progress-bar"></div>
+        </div>
+        
+
+        <div class="webbuddy-validated-card">
+            <div class="webbuddy-validated-text">
+                <span class="label">Sidst valideret</span>
+                <span class="value">16. december 2025</span>
+            </div>
+        </div>
+
+        <div class="safety-blocker-actions">
+            <button id="back-btn">Gå tilbage</button>
+            <button id="continue-btn">Gå videre alligevel</button>
+        </div>
+    </div>
+
+    <script>
+        
+        const progressBar = document.getElementById("webbuddy-progress-bar");
+        const progressLabel = document.getElementById("webbuddy-progress-label");
+
+        let progress = 0;
+        const target = Math.floor(Math.random() * 100) + 1; 
+        const interval = setInterval(() => {
+            if (progress >= target) {
+                clearInterval(interval);
+                return;
+            }
+            progress++;
+            progressBar.style.width = progress + "%";
+
+            if (progress <= 33) {
+                progressBar.style.backgroundColor = "#22c55e"; 
+            } else if (progress <= 66) {
+                progressBar.style.backgroundColor = "#f59e0b"; 
+            } else {
+                progressBar.style.backgroundColor = "#ed2424";
+            }
+        }, 15);
+    </script>
+
+</body>

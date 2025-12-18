@@ -12,7 +12,6 @@ public class Website {
     private boolean isSafe;
     private Integer confidence;
     private String reason;
-    private Integer category;
     private LocalDateTime validated;
     private LocalDateTime lastValidated;
 
@@ -23,27 +22,23 @@ public class Website {
 
     // ________________________________________________________________
 
-    public Website(String domain, boolean isSafe, Integer  confidence, String reason,
-    int category, LocalDateTime validated, LocalDateTime lastValidated) {
+    public Website(String domain, boolean isSafe, Integer  confidence, String reason, LocalDateTime validated, LocalDateTime lastValidated) {
         this.domain = domain;
         this.isSafe = isSafe;
         this.confidence = confidence;
         this.reason = reason;
-        this.category = category;
         this.validated = validated;
         this.lastValidated = lastValidated;
     }
 
     // ________________________________________________________________
 
-    public Website(int id, String domain, boolean isSafe, Integer  confidence, String reason,
-    int category, LocalDateTime validated, LocalDateTime lastValidated) {
+    public Website(int id, String domain, boolean isSafe, Integer  confidence, String reason, LocalDateTime validated, LocalDateTime lastValidated) {
         this.id = id;
         this.domain = domain;
         this.isSafe = isSafe;
         this.confidence = confidence;
         this.reason = reason;
-        this.category = category;
         this.validated = validated;
         this.lastValidated = lastValidated;
     }
@@ -106,18 +101,6 @@ public class Website {
 
     public void setReason(String reason) {
         this.reason = reason;
-    }
-
-    // ________________________________________________________________
-
-    public Integer  getCategory() {
-        return category;
-    }
-
-    // ________________________________________________________________
-
-    public void setCategory(Integer  category) {
-        this.category = category;
     }
 
     // ________________________________________________________________

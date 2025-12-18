@@ -14,6 +14,7 @@ public class PageController {
     public static void registerRoutes(Javalin app) {
 
         app.get("/", ctx -> ctx.html(ThymeleafSetup.render("index.html", null)));
+        app.get("/scanner", ctx -> ctx.html(ThymeleafSetup.render("scanner.html", null)));
 
     }
 

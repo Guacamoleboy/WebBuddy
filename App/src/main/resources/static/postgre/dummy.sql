@@ -34,8 +34,8 @@ INSERT INTO scan_request (domain, status, source) VALUES
 INSERT INTO ending_risk (ending, risk) VALUES
 ('dk', 1),
 ('co.uk', 1),
-('com', 2),
-('net', 2),
+('com', 1),
+('net', 1),
 ('org', 2),
 ('gg', 3),
 ('xyz', 4),

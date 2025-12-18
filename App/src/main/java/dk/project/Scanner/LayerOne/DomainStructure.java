@@ -25,6 +25,9 @@ public class DomainStructure {
         stepScores.add(checkSubdomainSize(domain, name));
         stepScores.add(checkSubdomainLength(domain, name));
         stepScores.add(checkQueryParams(url));
+        stepScores.add(checkDirectoryDepth(url));
+        stepScores.add(checkSequentialRepeatedCharacters(domain));
+        stepScores.add(checkUrlShortener(domain));
 
         // If all steps worked out
         int total = 0;
@@ -120,6 +123,124 @@ public class DomainStructure {
         if (count > 0) return 100;
 
         return 0;
+    }
+
+    // ________________________________________________________________
+    // fog.guacamoleboy.dk/test/test/test/test
+
+    private int checkDirectoryDepth(String url) {
+
+        // Initial URL Setup
+        url = url.replaceFirst("^https?://", "");
+
+        // Remove query params
+        url = url.split("\\?")[0];
+        url = url.split("#")[0];
+
+        // Find first "/"
+        int firstSlash = url.indexOf("/");
+        if (firstSlash == -1) {
+            return 0;
+        }
+
+        // Path
+        String path = url.substring(firstSlash + 1);
+
+        if (path.isEmpty()) return 0;
+
+        // Split path
+        String[] parts = path.split("/");
+
+        int depth = 0;
+        for (String part : parts) {
+            if (!part.isEmpty()) depth++;
+        }
+
+        // Scoring
+        if (depth == 0) return 0;
+        if (depth == 1) return 5;
+        if (depth == 2) return 10;
+        if (depth == 3) return 25;
+        if (depth == 4) return 50;
+        if (depth <= 6) return 75;
+        return 100;
+
+    }
+
+    // ________________________________________________________________
+    // Checks if the domain is a known URL shortener (bit.ly, tinyurl.com, etc.)
+
+    private int checkUrlShortener(String domain) {
+
+        // Lowercase
+        String d = domain.toLowerCase();
+
+        // List of known & approved shorteners
+        String[] shorteners = {
+                "bit.ly",
+                "tinyurl.com",
+                "t.co",
+                "goo.gl",
+                "ow.ly",
+                "buff.ly",
+                "is.gd",
+                "adf.ly",
+                "cutt.ly",
+                "shorte.st",
+                "tr.im",
+                "cli.gs",
+                "soo.gd",
+                "s.id",
+                "mcaf.ee",
+                "budurl.com",
+                "lnkd.in",
+                "rb.gy",
+                "bl.ink",
+                "po.st",
+                "qr.ae",
+                "v.gd",
+                "tiny.cc"
+        };
+
+        for (String s : shorteners) {
+            if (d.equals(s)) {
+                return 100;
+            }
+        }
+
+        return 0;
+    }
+
+    // ________________________________________________________________
+    // aaaaaapple.com, bbbbanana123.dk
+
+    private int checkSequentialRepeatedCharacters(String domain) {
+
+        int maxRepeat = 1;
+        int currentRepeat = 1;
+
+        for (int i = 1; i < domain.length(); i++) {
+            char prev = domain.charAt(i - 1);
+            char curr = domain.charAt(i);
+            if (prev == curr && Character.isLetterOrDigit(curr)) {
+                currentRepeat++;
+                if (currentRepeat > maxRepeat) {
+                    maxRepeat = currentRepeat;
+                }
+            } else {
+                currentRepeat = 1;
+            }
+        }
+
+        // Score
+        if (maxRepeat > 10) return 100;
+        if (maxRepeat > 7) return 60;
+        if (maxRepeat > 5) return 40;
+        if (maxRepeat > 3) return 20;
+        if (maxRepeat > 1) return 10;
+
+        return 0;
+
     }
 
     // ________________________________________________________________

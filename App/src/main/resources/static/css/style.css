@@ -42,6 +42,18 @@ body::-webkit-scrollbar { /* All other browsers */
     display: none;
 }
 
+a {
+    color: var(--light) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--primary) !important;
+
+}
+
 .page-content {
     flex: 1;
     display: flex;
@@ -72,8 +84,74 @@ body::-webkit-scrollbar { /* All other browsers */
     transition: color 0.2s ease;
 }
 
-.nav-link:hover {
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links > li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links button {
+    font-family: inherit;
+    line-height: 1;
+}
+.navbar .guac-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand span {
+    line-height: 40px;
+}
+
+.navbar .guac-btn-secondary {
+    border-radius: 0.5rem !important;
+    background-color: #3b3b3b;
+}
+
+.navbar li {
+    margin-bottom: 0rem !important;
+}
+
+.nav-links a,
+.nav-links button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--light);
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    align-items: center;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
     color: var(--primary) !important;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar-brand:hover {
+    color: var(--light);
 }
 
 .btn-outline-light {
@@ -90,10 +168,12 @@ body::-webkit-scrollbar { /* All other browsers */
 .btn-primary {
     background: linear-gradient(45deg, var(--primary), var(--accent-purple));
     border: none;
+    border-radius: 0.5rem !important;
     padding: 0.5rem 1.25rem;
     font-weight: 600;
     box-shadow: 0 2px 10px rgba(108, 92, 231, 0.4);
     transition: all 0.3s ease;
+    color: var(--light);
 }
 
 .btn-primary:hover {
@@ -103,6 +183,7 @@ body::-webkit-scrollbar { /* All other browsers */
 
 /* ######################### HERO ######################### */
 .hero {
+    isolation: isolate;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -118,13 +199,24 @@ body::-webkit-scrollbar { /* All other browsers */
 .hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
     background:
             radial-gradient(circle at var(--circle1-pos, 30% 70%), var(--primary) 0%, transparent 20%),
             radial-gradient(circle at var(--circle2-pos, 70% 30%), var(--accent-blue) 0%, transparent 20%);
     opacity: 0.1;
+}
+
+.dropdown-toggle i {
+    margin-left: 0.4rem;
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+}
+
+.dropdown.open .dropdown-toggle i,
+.footer-lang.open .dropdown-toggle i {
+    transform: rotate(180deg);
 }
 
 .hero .container {
@@ -133,7 +225,7 @@ body::-webkit-scrollbar { /* All other browsers */
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
@@ -144,10 +236,10 @@ body::-webkit-scrollbar { /* All other browsers */
 .hero h1 span { color: var(--accent-purple); }
 
 .hero p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.0rem;
+    opacity: 0.8;
     max-width: 600px;
-    margin: 0 auto 2rem;
+    margin: 1rem auto 1rem;
 }
 
 .input-group {
@@ -166,28 +258,37 @@ body::-webkit-scrollbar { /* All other browsers */
     background: transparent;
     border: none;
     color: var(--light);
+    opacity: 0.75 !important;
+    font-size: 0.9rem;
     flex: 1;
     outline: none;
-    font-size: 1rem;
+    font-weight: 600 !important;
 }
 
 .input-group input::placeholder {
-    color: rgba(255,255,255,0.6);
+    font-weight: 500 !important;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
 }
 
 .btn-send {
-    background: transparent;
+    background: rgba(123, 108, 246, 0.8);
     border: none;
-    color: var(--light);
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-size: 1.25rem;
-    transition: transform 0.2s ease;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
 }
 
 .btn-send:hover {
-    transform: rotate(45deg);
-    color: var(--primary);
+    background: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(123, 108, 246, 0.4);
 }
 
 .integration-buttons {
@@ -202,25 +303,30 @@ body::-webkit-scrollbar { /* All other browsers */
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--light);
-    padding: 0.5rem 1rem;
+    padding: 0.9rem 1.4rem;
     border-radius: 20px;
     font-size: 0.875rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .integration-btn:hover {
-    background: rgba(255,255,255,0.1);
+    background: var(--primary);
     transform: translateY(-2px);
+    box-shadow: 0 0 12px var(--primary), 0 0 4px var(--primary, rgba(123, 108, 246, 0.3));
+    color: var(--light);
 }
 
 .integration-btn i {
     font-size: 1rem;
 }
 
-.logo-small { width: 50%; height: auto; }
+.logo-small {
+    width: 10% !important;
+    height: auto;
+}
 
 /* ######################### ANNOUNCEMENT ######################### */
 .announcement-bar {
@@ -366,6 +472,162 @@ body::-webkit-scrollbar { /* All other browsers */
     font-size: 1.1rem;
     color: var(--accent-purple);
     text-shadow: 0 0 8px rgba(176, 133, 245, 0.5);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    display: none;
+    background: rgba(18,18,26,0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    min-width: 160px;
+    padding: 0.25rem 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    height: 36px;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(123, 108, 246, 0.2);
+    color: var(--primary);
+}
+
+.dropdown-bottom .dropdown-menu {
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    display: none;
+    background: rgba(18,18,26,0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    min-width: 160px;
+    padding: 0.25rem 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.dropdown-bottom.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-bottom .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    height: 36px;
+}
+
+.dropdown-bottom .dropdown-menu a:hover {
+    background: rgba(123, 108, 246, 0.2);
+    color: var(--primary);
+}
+
+.footer-lang {
+    position: relative;
+}
+
+.footer-lang .dropdown-menu {
+    position: absolute;
+    bottom: 120%; /* lidt afstand fra knappen */
+    left: 0;
+    display: none;
+    background: rgba(18,18,26,0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    min-width: 100px;
+    padding: 0.25rem 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+/* Vis dropdown */
+.footer-lang.open .dropdown-menu {
+    display: block;
+}
+
+/* Links styling */
+.footer-lang .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centrerer teksten */
+    padding: 0.35rem 1rem;   /* lidt mindre end top dropdown */
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    height: 36px;
+}
+
+/* Hover-effekt */
+.footer-lang .dropdown-menu a:hover {
+    background: rgba(123, 108, 246, 0.2);
+    color: var(--primary);
+}
+
+/* Dropdown-knap */
+.footer-lang .dropdown-toggle {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    color: var(--light);
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.footer-lang .dropdown-toggle:hover {
+    background: rgba(123, 108, 246, 0.15);
+}
+
+.navbar-logo {
+    width: 10%;
+    height: auto;
+    display: block;
+}
+
+.navbar > .guac-container > a span {
+    line-height: 40px;
 }
 
 /* ######################### MEDIA ######################### */

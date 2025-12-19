@@ -4,7 +4,9 @@ Category,
 scan_request,
 ending_risk,
 scan_result,
-website_category
+website_category,
+reports,
+website_reports
 RESTART IDENTITY CASCADE;
 
 INSERT INTO Category (name) VALUES

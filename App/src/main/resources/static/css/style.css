@@ -566,7 +566,7 @@ a:hover {
 
 .footer-lang .dropdown-menu {
     position: absolute;
-    bottom: 120%; /* lidt afstand fra knappen */
+    bottom: 120%;
     left: 0;
     display: none;
     background: rgba(18,18,26,0.95);
@@ -581,30 +581,26 @@ a:hover {
     overflow: hidden;
 }
 
-/* Vis dropdown */
 .footer-lang.open .dropdown-menu {
     display: block;
 }
 
-/* Links styling */
 .footer-lang .dropdown-menu a {
     display: flex;
     align-items: center;
-    justify-content: center; /* centrerer teksten */
-    padding: 0.35rem 1rem;   /* lidt mindre end top dropdown */
+    justify-content: center;
+    padding: 0.35rem 1rem;
     color: white;
     text-decoration: none;
     transition: background 0.2s ease, color 0.2s ease;
     height: 36px;
 }
 
-/* Hover-effekt */
 .footer-lang .dropdown-menu a:hover {
     background: rgba(123, 108, 246, 0.2);
     color: var(--primary);
 }
 
-/* Dropdown-knap */
 .footer-lang .dropdown-toggle {
     background: none;
     border: 1px solid rgba(255,255,255,0.2);

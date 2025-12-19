@@ -99,17 +99,32 @@
             </div>
         </div>
         <p class="text-uppercase fw-bold mb-2">YOUR ONLINE SAFETY FRIEND - FREE OF CHARGE</p>
-        <h1>Scan links - <span>browse with confidence.</span></h1>
+        <h1><span>Report a website</span></h1>
 
         <div class="input-group">
             <input type="text" id="domain" placeholder="Paste your url here">
             <button class="btn-send"><i class="bi bi-arrow-up"></i></button>
         </div>
+        <h2 class="report-category-h2">Choose a category</h2>
         <div class="integration-buttons">
-            <button class="integration-btn"><i class="bi bi-shield-lock"></i> Threat Detection</button>
-            <button class="integration-btn"><i class="bi bi-graph-up"></i> Safety Score</button>
-            <button class="integration-btn"><i class="bi bi-browser-chrome"></i> Browser Extension</button>
-            <button class="integration-btn"><i class="bi bi-bell"></i> Real-time Alerts</button>
+            <button class="integration-btn">Scam</button>
+            <button class="integration-btn">Phishing</button>
+            <button class="integration-btn">Malware</button>
+            <button class="integration-btn">Fraud</button>
+            <button class="integration-btn">Fake</button>
+            <button class="integration-btn">Money Fraud</button>
+        </div>
+        <h2 class="report-rating-h2">How sure are you?</h2>
+        <div class="confidence-slider">
+            <input type="range"
+                    id="confidence"
+                    min="1"
+                    max="100"
+                    value="50"
+                    oninput="confidenceValue.innerText = this.value + '%'">
+            <div class="slider-value">
+                <span id="confidenceValue">50%</span>
+            </div>
         </div>
     </div>
 </section>

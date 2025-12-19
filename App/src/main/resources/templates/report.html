@@ -10,7 +10,7 @@
     <meta name="author" content="Guacamoleboy"> <!-- Author of Website -->
 
     <!-- Visuals -->
-    <title>WebBuddy.com - Scan links - browse with confidence</title>
+    <title>WebBuddy.com - Report a website</title>
 
     <!-- Icon -->
     <link rel="icon" href="/images/logo/png/logo-64.png" type="image/x-icon">
@@ -41,24 +41,22 @@
         <span>WebBuddy Version 1.0.0 Launched | Download the extension for free</span>
     </div>
 </div>
-<!-- Announcement Bar -->
 
+<!-- Navbar -->
 <nav class="navbar">
     <div class="guac-container guac-d-flex guac-align-center guac-justify-between">
 
         <!-- Brand -->
-        <a href="#" class="guac-d-flex guac-align-center">
+        <a href="/" class="guac-d-flex guac-align-center">
             <img src="/images/logo/png/logo-nb.png" alt="WebBuddy Logo" class="navbar-logo">
             <span class="guac-ml-2">WebBuddy.com</span>
         </a>
+        <!-- Brand -->
 
         <!-- Links -->
         <ul class="guac-d-flex guac-align-center guac-gap-3 nav-links">
-
             <li class="dropdown">
-                <button class="dropdown-toggle">
-                    Browser Extension <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </button>
+                <button class="dropdown-toggle">Browser Extension <i class="fa fa-chevron-down"></i></button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Firefox</a></li>
                     <li><a href="#">Opera</a></li>
@@ -67,27 +65,20 @@
                     <li><a href="#">Chrome</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
-                <button class="dropdown-toggle">
-                    Recent <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </button>
+                <button class="dropdown-toggle">Recent <i class="fa fa-chevron-down"></i></button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Banned Domains</a></li>
                     <li><a href="#">Searched Domains</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
-                <button class="dropdown-toggle">
-                    API <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </button>
+                <button class="dropdown-toggle">API <i class="fa fa-chevron-down"></i></button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Getting Started</a></li>
                     <li><a href="#">Pricing</a></li>
                 </ul>
             </li>
-
             <li><a href="#" class="nav-link">Our Mission</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
@@ -97,63 +88,58 @@
             <button class="guac-btn guac-btn-secondary">Log in</button>
             <button class="guac-btn btn-primary">API Access</button>
         </div>
-
     </div>
 </nav>
 
+<!-- Hero / Report Section -->
 <section class="hero">
     <div class="guac-container guac-text-center">
         <img src="/images/logo/png/logo-test-2.png" class="logo-small" alt="WebBuddy Logo">
-        <p class="guac-fw-bold">
-            YOUR ONLINE SAFETY FRIEND - FREE OF CHARGE
-        </p>
-        <h1>
-            Scan links – <span>browse with confidence.</span>
-        </h1>
+        <p class="guac-fw-bold">YOUR ONLINE SAFETY FRIEND - FREE OF CHARGE</p>
+        <h1><span>Report a website</span></h1>
+
+        <!-- URL Input -->
         <div class="input-group">
             <input type="text" id="domain" placeholder="Paste your url here">
             <button class="btn-send"><i class="fa fa-search"></i></button>
         </div>
+
+        <!-- Categories -->
+        <h2 class="report-category-h2">Choose a category</h2>
         <div class="integration-buttons">
-            <button class="integration-btn">
-                <i class="fa fa-shield"></i>
-                <span>Threat Detection</span>
-            </button>
+            <button class="integration-btn">Scam</button>
+            <button class="integration-btn">Phishing</button>
+            <button class="integration-btn">Malware</button>
+            <button class="integration-btn">Fraud</button>
+            <button class="integration-btn">Fake</button>
+            <button class="integration-btn">Money Fraud</button>
+        </div>
 
-            <button class="integration-btn">
-                <i class="fa fa-line-chart"></i>
-                <span>Safety Score</span>
-            </button>
-
-            <button class="integration-btn">
-                <i class="fa fa-globe"></i>
-                <span>Browser Extension</span>
-            </button>
-
-            <button class="integration-btn">
-                <i class="fa fa-bell"></i>
-                <span>Real-time Alerts</span>
-            </button>
+        <!-- Confidence Slider -->
+        <h2 class="report-rating-h2">How sure are you?</h2>
+        <div class="confidence-slider">
+            <input type="range" id="confidence" min="1" max="100" value="50" oninput="confidenceValue.innerText = this.value + '%'">
+            <div class="slider-value">
+                <span id="confidenceValue">50%</span>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Footer -->
 <footer class="site-footer">
     <div class="guac-container">
         <div class="footer-inner">
-
             <span class="footer-brand">WebBuddy</span>
             <span class="footer-divider">•</span>
             <span>© 2025</span>
             <span class="footer-divider">•</span>
             <span>All rights reserved</span>
             <span class="footer-divider">•</span>
-
             <a href="#" class="footer-link">Privacy</a>
             <span class="footer-divider">•</span>
             <a href="#" class="footer-link">Terms</a>
             <span class="footer-divider">•</span>
-
             <div class="dropdown footer-lang">
                 <button class="dropdown-toggle">EN</button>
                 <ul class="dropdown-menu">
@@ -163,7 +149,6 @@
                     <li><a href="#">ES</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
 </footer>

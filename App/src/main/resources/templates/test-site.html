@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scan links with WebBuddy and stay safe online">
+    <meta name="author" content="Guacamoleboy">
 
-    <!-- Meta -->
-    <meta charset="UTF-8"> <!-- ÆØÅ -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- In case some nerd uses Internet Explorer -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile Responsiveness -->
-    <meta name="description" content="Beregn prisen på din carport i dag på få minutter"> <!-- SEO / Google -->
-    <meta name="author" content="Guacamoleboy"> <!-- Author of Website -->
+    <title>WebBuddy.com - Report a website</title>
 
-    <!-- Visuals -->
-    <title>WebBuddy.com - Scan links - browse with confidence</title>
-
-    <!-- Icon -->
     <link rel="icon" href="/images/logo/png/logo-64.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/images/logo/png/logo-64.png">
 
-    <!-- Framework Load -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Framework & CSS -->
     <link rel="stylesheet" href="/css/guacamoleboy-wow.css">
     <link rel="stylesheet" href="/css/guacamoleboy-framework.css">
-    <script src="/js/guacamoleboy-wow.js" defer></script>
-
-    <!-- CSS Load -->
     <link rel="stylesheet" href="/css/style.css">
 
-    <!-- Script Load-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- JS -->
+    <script src="/js/guacamoleboy-wow.js" defer></script>
     <script src="/js/notification.js" defer></script>
     <script src="/js/circle-movement.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-
+    <script src="/js/guacamoleboy-dropdown.js" defer></script>
 </head>
 <body>
 
@@ -40,71 +34,69 @@
         <span>WebBuddy Version 1.0.0 Launched | Download the extension for free</span>
     </div>
 </div>
-<!-- Announcement Bar -->
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="/images/logo/png/logo-nb.png" alt="WebBuddy Logo">
-            <span class="ms-2">WebBuddy.com</span>
+<nav class="navbar">
+    <div class="guac-container guac-d-flex guac-align-center guac-justify-between">
+
+        <!-- Brand -->
+        <a href="#" class="guac-d-flex guac-align-center">
+            <img src="/images/logo/png/logo-nb.png" alt="WebBuddy Logo" class="navbar-logo">
+            <span class="guac-ml-2">WebBuddy.com</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Browser Extension</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Firefox</a></li>
-                        <li><a class="dropdown-item" href="#">Opera</a></li>
-                        <li><a class="dropdown-item" href="#">Brave</a></li>
-                        <li><a class="dropdown-item" href="#">Safari</a></li>
-                        <li><a class="dropdown-item" href="#">Chrome</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recent</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Banned Domains</a></li>
-                        <li><a class="dropdown-item" href="#">Searched Domains</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">API</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Getting Started</a></li>
-                        <li><a class="dropdown-item" href="#">Pricing</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#">Our Mission</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-            <div class="ms-3 d-flex align-items-center">
-                <button class="btn btn-outline-light me-2">Log in</button>
-                <button class="btn btn-primary">API Access</button>
-            </div>
+
+        <!-- Links -->
+        <ul class="guac-d-flex guac-align-center guac-gap-3 nav-links">
+            <li class="dropdown">
+                <button class="dropdown-toggle">Browser Extension <i class="fa fa-chevron-down"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Firefox</a></li>
+                    <li><a href="#">Opera</a></li>
+                    <li><a href="#">Brave</a></li>
+                    <li><a href="#">Safari</a></li>
+                    <li><a href="#">Chrome</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <button class="dropdown-toggle">Recent <i class="fa fa-chevron-down"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Banned Domains</a></li>
+                    <li><a href="#">Searched Domains</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <button class="dropdown-toggle">API <i class="fa fa-chevron-down"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Getting Started</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="nav-link">Our Mission</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="guac-d-flex guac-gap-2">
+            <button class="guac-btn guac-btn-secondary">Log in</button>
+            <button class="guac-btn btn-primary">API Access</button>
         </div>
     </div>
 </nav>
-<!-- Navbar -->
 
-<!-- Hero Section -->
+<!-- Hero / Report Section -->
 <section class="hero">
-    <div class="container">
-        <div class="d-flex justify-content-center mb-3">
-            <div class="p-2">
-                <img src="/images/logo/png/logo-test-2.png" class="logo-small" alt="WebBuddy Logo">
-            </div>
-        </div>
-        <p class="text-uppercase fw-bold mb-2">YOUR ONLINE SAFETY FRIEND - FREE OF CHARGE</p>
+    <div class="guac-container guac-text-center">
+        <img src="/images/logo/png/logo-test-2.png" class="logo-small" alt="WebBuddy Logo">
+        <p class="guac-fw-bold">YOUR ONLINE SAFETY FRIEND - FREE OF CHARGE</p>
         <h1><span>Report a website</span></h1>
 
+        <!-- URL Input -->
         <div class="input-group">
             <input type="text" id="domain" placeholder="Paste your url here">
-            <button class="btn-send"><i class="bi bi-arrow-up"></i></button>
+            <button class="btn-send"><i class="fa fa-search"></i></button>
         </div>
+
+        <!-- Categories -->
         <h2 class="report-category-h2">Choose a category</h2>
         <div class="integration-buttons">
             <button class="integration-btn">Scam</button>
@@ -114,56 +106,44 @@
             <button class="integration-btn">Fake</button>
             <button class="integration-btn">Money Fraud</button>
         </div>
+
+        <!-- Confidence Slider -->
         <h2 class="report-rating-h2">How sure are you?</h2>
         <div class="confidence-slider">
-            <input type="range"
-                    id="confidence"
-                    min="1"
-                    max="100"
-                    value="50"
-                    oninput="confidenceValue.innerText = this.value + '%'">
+            <input type="range" id="confidence" min="1" max="100" value="50" oninput="confidenceValue.innerText = this.value + '%'">
             <div class="slider-value">
                 <span id="confidenceValue">50%</span>
             </div>
         </div>
     </div>
 </section>
-<!-- Hero Section -->
 
 <!-- Footer -->
 <footer class="site-footer">
-    <div class="container">
+    <div class="guac-container">
         <div class="footer-inner">
             <span class="footer-brand">WebBuddy</span>
             <span class="footer-divider">•</span>
-            <span class="footer-copy">© 2025</span>
+            <span>© 2025</span>
             <span class="footer-divider">•</span>
-            <span class="footer-rights">All rights reserved</span>
+            <span>All rights reserved</span>
             <span class="footer-divider">•</span>
             <a href="#" class="footer-link">Privacy</a>
             <span class="footer-divider">•</span>
             <a href="#" class="footer-link">Terms</a>
             <span class="footer-divider">•</span>
-            <div class="footer-right">
-                <div class="dropdown">
-                    <button class="btn btn-outline-light dropdown-toggle p-0"
-                            id="languageDropdown"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        <span>EN</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#">DK</a></li>
-                        <li><a class="dropdown-item" href="#">DE</a></li>
-                        <li><a class="dropdown-item" href="#">FR</a></li>
-                        <li><a class="dropdown-item" href="#">ES</a></li>
-                    </ul>
-                </div>
+            <div class="dropdown footer-lang">
+                <button class="dropdown-toggle">EN</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">DK</a></li>
+                    <li><a href="#">DE</a></li>
+                    <li><a href="#">FR</a></li>
+                    <li><a href="#">ES</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </footer>
-<!-- Footer -->
 
 <!-- Notifications -->
 <div id="guac-notification-container"></div>

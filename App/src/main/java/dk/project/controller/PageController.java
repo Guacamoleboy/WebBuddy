@@ -16,6 +16,7 @@ public class PageController {
         app.get("/t", ctx -> ctx.html(ThymeleafSetup.render("test-site.html", null)));
         app.get("/", ctx -> ctx.html(ThymeleafSetup.render("index.html", null)));
         app.get("/scanner", ctx -> ctx.html(ThymeleafSetup.render("scanner.html", null)));
+        app.get("/s", ctx -> ctx.html(ThymeleafSetup.render("site.html", null)));
 
     }
 

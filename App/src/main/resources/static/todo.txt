@@ -1,0 +1,22 @@
+################################################
+            STEPS TO KEEP TRACK
+################################################
+
+1) Create index.html [X]
+2) Create setup.sql & dummy.sql [X]
+3) Scan Backend Setup [X]
+4) Initial First Scan Layer [X]
+5) Make sure confidence works for the layers put together [X]
+6) Make a pop up saying (Website not scanned yet.. Scan now?) | Index.html []
+7) If a user chooses yes it should trigger the /scan backend command []
+8) Once the scan is done it should display the sites individual site as .html []
+9) Example could be webbuddy.com/fog.guacamoleboy.dk. Loads stats from that URL []
+10) Each URL is unique, så params and stuff will trigger a new stat .html file which is the point []
+11) Set up a .html file allowing people to report a url []
+12) Reports should trigger a site load /fog.guacemoleboy.dk + a notification telling them report went through []
+13) Test features and make sure they work []
+14) Add more layers to the Deep Scanner []
+15) Complete FireFox extension and make sure it works []
+16) Update extension to work on Chrome, Brave, Opera and other browsers []
+17) Deploy the website as .jar and make sure it works when uploaded | Deployment settings []
+18) WebBuddy 1.0.0 Launch!

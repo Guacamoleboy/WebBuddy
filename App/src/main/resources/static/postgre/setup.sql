@@ -6,7 +6,8 @@ ending_risk,
 scan_result,
 website_category,
 reports,
-website_reports
+website_reports,
+website_report_categories
 CASCADE;
 
 CREATE TABLE category (
@@ -63,7 +64,7 @@ risk SMALLINT NOT NULL CHECK (risk BETWEEN 1 AND 5)                    -- 1 -> 5
 CREATE TABLE reports (
 id SERIAL PRIMARY KEY,
 domain TEXT NOT NULL,                                                   -- Not unique
-confidence INTEGER NOT NULL,                                            -- How sure people are
+confidence INTEGER NOT NULL CHECK (confidence BETWEEN 1 AND 100),       -- How sure people are
 category INTEGER REFERENCES category(id),                               -- Chosen category
 reported_at TIMESTAMP NOT NULL DEFAULT now()                            -- Time of report
 );
@@ -71,9 +72,16 @@ reported_at TIMESTAMP NOT NULL DEFAULT now()                            -- Time 
 CREATE TABLE website_reports (
 id SERIAL PRIMARY KEY,
 domain TEXT NOT NULL UNIQUE,                                            -- Unique
-confidence INTEGER NOT NULL,                                            -- totalConfidence / totalReports.length
-category INTEGER REFERENCES category(id),                               -- Multiple
+confidence INTEGER NOT NULL CHECK (confidence BETWEEN 1 AND 100),       -- totalConfidence / totalReports.length
+total_reports INTEGER NOT NULL,
 last_reported TIMESTAMP NOT NULL,                                       -- Last public report
 last_validated TIMESTAMP NOT NULL,                                      -- Last validation by / scanner
 description TEXT NOT NULL                                               -- Display text (depends on confidence rating & category)
-)
+);
+
+CREATE TABLE website_report_categories (
+website_report_id INTEGER REFERENCES website_reports(id) ON DELETE CASCADE,
+category_id INTEGER NOT NULL REFERENCES category(id),
+report_count INTEGER NOT NULL,                                          -- Total Count
+PRIMARY KEY (website_report_id, category_id)
+);
